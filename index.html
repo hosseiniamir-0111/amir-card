@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>کارت ویزیت - امیر حسینی</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Tahoma", sans-serif;
+        background-color: #111;
+        color: #f0c040;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        direction: rtl;
+      }
+      .card {
+        background-color: #1a1a1a;
+        border: 2px solid #f0c040;
+        border-radius: 20px;
+        padding: 2rem;
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(240, 192, 64, 0.5);
+      }
+      .logo {
+        width: 100px;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        margin: 0.5rem 0;
+      }
+      .title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: #ddd;
+      }
+      .info {
+        margin: 0.3rem 0;
+      }
+      .social {
+        margin-top: 1rem;
+      }
+      .social a {
+        margin: 0 0.5rem;
+        color: #f0c040;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+      .download-btn {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.5rem 1rem;
+        background-color: #f0c040;
+        color: #111;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        border: none;
+        cursor: pointer;
+      }
+      .download-btn:hover {
+        background-color: #d4a500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png"
+        alt="ساختمان"
+        class="logo"
+      />
+      <h1>امیر حسینی</h1>
+      <div class="title">مهندس عمران</div>
+      <div class="info">📧 hosseiniamir0111@gmail.com</div>
+      <div class="info">📞 09192446567</div>
+      <div class="social">
+        <a href="https://instagram.com" target="_blank">اینستاگرام</a>
+        <a href="https://wa.me/989192446567" target="_blank">💬 واتساپ</a>
+      </div>
+      <button class="download-btn" onclick="downloadCard()">
+        دانلود کارت ویزیت
+      </button>
+    </div>
+
+    <script>
+      function downloadCard() {
+        const htmlContent = document.documentElement.outerHTML;
+        const blob = new Blob([htmlContent], { type: "text/html" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "کارت-ویزیت.html";
+        a.click();
+      }
+    </script>
+  </body>
+</html>
