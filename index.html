@@ -7,6 +7,7 @@
     <style>
       body {
         margin: 0;
+        padding: 1rem; /* ← فاصله اطراف */
         font-family: "Tahoma", sans-serif;
         background-color: #111;
         color: #f0c040;
@@ -15,16 +16,18 @@
         align-items: center;
         height: 100vh;
         direction: rtl;
+        box-sizing: border-box;
       }
       .card {
         background-color: #1a1a1a;
         border: 2px solid #f0c040;
         border-radius: 20px;
         padding: 2rem;
-        width: 90%;
+        width: 100%;
         max-width: 400px;
         text-align: center;
         box-shadow: 0 0 15px rgba(240, 192, 64, 0.5);
+        box-sizing: border-box;
       }
       .logo {
         width: 100px;
